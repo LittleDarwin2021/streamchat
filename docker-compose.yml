@@ -6,7 +6,7 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
-    container_name: streamlit
+    container_name: streamlit_chat
     working_dir: '/src'
     tty: true
     volumes: 
@@ -15,4 +15,4 @@ services:
       - ./.env
     ports: 
       - '8501:8501'
-    command: streamlit run chatgpt_streamlit.py
+    command: streamlit run streamchat.py
